@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ICA-YX-95I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Demo_PalmTree_480x640.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bbh-tp-ZYE">
+                                <rect key="frame" x="0.0" y="-5" width="600" height="640"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4IG-QH-wmd" userLabel="COLOR (UISlider)">
+                                <rect key="frame" x="58" y="286" width="484" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="setColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="1PQ-1f-Nsj"/>
+                                    <action selector="touchDownColor:" destination="BYZ-38-t0r" eventType="touchDown" id="fPu-6i-m6B"/>
+                                    <action selector="touchUpColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Twu-Vu-S2G"/>
+                                    <action selector="touchUpColor:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="ljS-a0-stV"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="COLOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYT-3x-WI8">
+                                <rect key="frame" x="16" y="137" width="568" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4IG-QH-wmd" firstAttribute="leading" secondItem="ICA-YX-95I" secondAttribute="leading" constant="60" id="DdE-Ih-hIq"/>
+                            <constraint firstItem="WYT-3x-WI8" firstAttribute="leading" secondItem="ICA-YX-95I" secondAttribute="leading" constant="16" id="IlB-TT-9SO"/>
+                            <constraint firstAttribute="trailing" secondItem="Bbh-tp-ZYE" secondAttribute="trailing" id="M2V-6K-k5D"/>
+                            <constraint firstAttribute="centerX" secondItem="Bbh-tp-ZYE" secondAttribute="centerX" id="RTs-u8-sfT"/>
+                            <constraint firstItem="Bbh-tp-ZYE" firstAttribute="top" secondItem="ICA-YX-95I" secondAttribute="top" constant="-5" id="e9I-oA-NQT"/>
+                            <constraint firstAttribute="centerX" secondItem="4IG-QH-wmd" secondAttribute="centerX" id="jkM-2M-oVi"/>
+                            <constraint firstAttribute="bottom" secondItem="Bbh-tp-ZYE" secondAttribute="bottom" constant="-35" id="syi-yd-S24"/>
+                            <constraint firstAttribute="trailing" secondItem="WYT-3x-WI8" secondAttribute="trailing" constant="16" id="uPw-TU-DSG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagePalm" destination="Bbh-tp-ZYE" id="kPr-LH-5RF"/>
+                        <outlet property="labelColor" destination="WYT-3x-WI8" id="EdZ-a9-swf"/>
+                        <outlet property="slider" destination="4IG-QH-wmd" id="DSe-cj-RCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Demo_PalmTree_480x640.jpg" width="480" height="640"/>
+    </resources>
+</document>
